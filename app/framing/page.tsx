@@ -23,7 +23,7 @@ export default function FramingPage() {
   const axes = meta.layer2Categories.map((c) => c.title);
 
   return (
-    <div className="space-y-6">
+    <div data-theme="red" className="space-y-6">
       <PageHeader
         title="Depth of decolonial framing"
         lead="Beyond whether a topic appears, Layer 2 asks how it is framed — across six dimensions of decolonial and equity-centered pedagogy."
@@ -45,7 +45,7 @@ export default function FramingPage() {
             <Section title="Framing profile" hint="Mean share of criteria met per category (0–100%).">
               <Radar
                 axes={axes.map((a) => a.split(" ").slice(0, 4).join(" "))}
-                series={[{ name: "Filtered syllabi", color: C.primary, values: profile }]}
+                series={[{ name: "Filtered syllabi", color: C.yes, values: profile }]}
               />
             </Section>
             <Section title="Category strength" hint="Average % of sub-criteria met.">
@@ -59,7 +59,7 @@ export default function FramingPage() {
                       </span>
                     </div>
                     <div className="h-2 w-full overflow-hidden rounded-full bg-line">
-                      <div className="h-full rounded-full" style={{ width: `${profile[i] * 100}%`, background: C.primary }} />
+                      <div className="h-full rounded-full" style={{ width: `${profile[i] * 100}%`, background: C.yes }} />
                     </div>
                   </li>
                 ))}

@@ -23,6 +23,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Red-pill theme: any page that renders [data-theme="red"] recolors the shared
+   chrome (nav pill, filter chips, % labels, background wash) from blue to red. */
+body:has([data-theme="red"]) {
+  --color-primary: #be123c;
+  background:
+    radial-gradient(60rem 60rem at 100% -10%, #fff1f2 0%, transparent 50%),
+    radial-gradient(50rem 50rem at -10% 110%, #fef2f2 0%, transparent 45%),
+    #fbf8f8;
+}
+
 .card {
   @apply rounded-2xl border border-line bg-white/80 backdrop-blur-sm shadow-sm;
 }
