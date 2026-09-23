@@ -23,7 +23,7 @@ export default function FramingPage() {
   const axes = meta.layer2Categories.map((c) => c.title);
 
   return (
-    <div data-theme="red" className="space-y-6">
+    <div className="space-y-6">
       <PageHeader
         title="Depth of decolonial framing"
         lead="Beyond whether a topic appears, Layer 2 asks how it is framed — across six dimensions of decolonial and equity-centered pedagogy."
@@ -40,7 +40,7 @@ export default function FramingPage() {
           <p className="text-sm text-muted">No syllabi match the current filters.</p>
         </Section>
       ) : (
-        <>
+        <div data-theme="red" className="space-y-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
             <Section title="Framing profile" hint="Mean share of criteria met per category (0–100%).">
               <Radar
@@ -81,7 +81,7 @@ export default function FramingPage() {
               <ProportionBars rows={triRowsFor(cat.questions, (s) => s.layer2, filtered)} />
             </Section>
           ))}
-        </>
+        </div>
       )}
     </div>
   );

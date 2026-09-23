@@ -1,6 +1,6 @@
 // Data answers: red = Yes (decolonized), blue = No, grey = NEI.
 // Brand/metric chrome: blue (primary) + violet (accent) — never used for the Yes/No answers.
-// Exception: /framing is themed red (see globals.css), since its metrics are the share of "Yes".
+// Exception: the results on /framing are themed red (see globals.css), since they are the share of "Yes".
 // Facets (country, course level) use their own qualitative hues, distinct from the answer colors.
 export const C = {
   ink: "#1e293b",
