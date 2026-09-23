@@ -14,9 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans min-h-screen">
         <Nav />
         <main className="mx-auto max-w-7xl px-5 pb-24 pt-8">{children}</main>
-        <footer className="border-t border-line py-8 text-center text-sm text-muted">
-          84 global health syllabi · USA & Canada · static site, no backend
-        </footer>
+        <footer className="border-t border-line py-8 text-center text-sm text-muted">GH 101</footer>
       </body>
     </html>
   );

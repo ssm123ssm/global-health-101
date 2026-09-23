@@ -52,7 +52,6 @@ function QuestionRow({
 }
 
 export default function AnalyzePage() {
-  const [label, setLabel] = useState("");
   const [layer1, setLayer1] = useState<Record<string, Tri>>(() => emptyRecord(meta.layer1));
   const [layer2, setLayer2] = useState<Record<string, Tri>>(() => emptyRecord(ALL_LAYER2));
   const [loaded, setLoaded] = useState(false);
@@ -63,7 +62,6 @@ export default function AnalyzePage() {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
         const saved = JSON.parse(raw);
-        if (typeof saved.label === "string") setLabel(saved.label);
         if (saved.layer1) setLayer1((prev) => ({ ...prev, ...saved.layer1 }));
         if (saved.layer2) setLayer2((prev) => ({ ...prev, ...saved.layer2 }));
       }
@@ -76,14 +74,13 @@ export default function AnalyzePage() {
   useEffect(() => {
     if (!loaded) return;
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify({ label, layer1, layer2 }));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ layer1, layer2 }));
     } catch {
       // storage unavailable (private mode, quota, etc.) — answers just won't persist
     }
-  }, [loaded, label, layer1, layer2]);
+  }, [loaded, layer1, layer2]);
 
   const reset = () => {
-    setLabel("");
     setLayer1(emptyRecord(meta.layer1));
     setLayer2(emptyRecord(ALL_LAYER2));
     try {
@@ -149,17 +146,8 @@ export default function AnalyzePage() {
         lead="Uses the same coding instrument applied to the 84 syllabi in this dataset. Answers are scored in the browser and discarded."
       />
 
-      <Section
-        title={label || "Your syllabus"}
-        hint="Optional label, useful when comparing multiple syllabi."
-      >
+      <Section title="Progress">
         <div className="flex flex-wrap items-center gap-3">
-          <input
-            value={label}
-            onChange={(e) => setLabel(e.target.value)}
-            placeholder="e.g. GH 210, Fall 2026"
-            className="w-full max-w-xs rounded-lg border border-line bg-white px-3 py-1.5 text-sm outline-none focus:border-primary"
-          />
           <button
             onClick={reset}
             className="rounded-lg px-3 py-1.5 text-sm font-medium text-muted ring-1 ring-line transition hover:text-ink"
@@ -188,14 +176,14 @@ export default function AnalyzePage() {
         <Radar
           axes={axes}
           series={[
-            { name: label || "Your syllabus", color: C.accent, values: userProfile },
+            { name: "Your syllabus", color: C.accent, values: userProfile },
             { name: "Dataset average", color: C.muted, values: datasetProfile },
           ]}
         />
         <div className="mt-3 flex flex-wrap gap-4 text-xs text-muted">
           <span className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-sm" style={{ background: C.accent }} />
-            {label || "Your syllabus"}
+            Your syllabus
           </span>
           <span className="flex items-center gap-1.5">
             <span className="h-2.5 w-2.5 rounded-sm" style={{ background: C.muted }} />
