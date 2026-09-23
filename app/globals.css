@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1e293b;
+  --color-muted: #64748b;
+  --color-faint: #cbd5e1;
+  --color-line: #e2e8f0;
+  --color-primary: #1d4ed8;
+  --color-accent: #7c3aed;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(60rem 60rem at 100% -10%, #eff6ff 0%, transparent 50%),
+    radial-gradient(50rem 50rem at -10% 110%, #f5f3ff 0%, transparent 45%),
+    #f8fafc;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  @apply rounded-2xl border border-line bg-white/80 backdrop-blur-sm shadow-sm;
+}

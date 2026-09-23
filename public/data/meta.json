@@ -1,0 +1,190 @@
+{
+  "recordCount": 84,
+  "coverageMax": 11,
+  "framingMax": 18,
+  "infoFlags": [
+    {
+      "key": "description",
+      "label": "Course descriptions / objectives"
+    },
+    {
+      "key": "lectureTopics",
+      "label": "Lecture topics / themes"
+    },
+    {
+      "key": "lecturers",
+      "label": "Lecturers & their information"
+    },
+    {
+      "key": "readingList",
+      "label": "Reading list"
+    },
+    {
+      "key": "assignments",
+      "label": "Assignment details"
+    }
+  ],
+  "infoLevelLadder": [
+    "Course descriptions & objectives",
+    "+ Lecture topics / themes",
+    "+ Lecturers & their information",
+    "+ Reading list",
+    "+ Assignment details"
+  ],
+  "layer1": [
+    {
+      "key": "l1_equityObjectives",
+      "label": "Equity/power stated in objectives"
+    },
+    {
+      "key": "l1_colonialObjectives",
+      "label": "Colonial roots stated in objectives"
+    },
+    {
+      "key": "l1_colonialHistory",
+      "label": "Lecture/reading: colonial history of GH"
+    },
+    {
+      "key": "l1_decolonizing",
+      "label": "Lecture/reading: decolonizing GH"
+    },
+    {
+      "key": "l1_powerPrivilege",
+      "label": "Lecture/reading: power & privilege"
+    },
+    {
+      "key": "l1_determinants",
+      "label": "Lecture/reading: social & political determinants"
+    },
+    {
+      "key": "l1_antiOppression",
+      "label": "Lecture/reading: anti-oppression / anti-racism"
+    },
+    {
+      "key": "l1_culturalCompetence",
+      "label": "Lecture/reading: cultural competence / belonging"
+    },
+    {
+      "key": "l1_whiteSaviorism",
+      "label": "Lecture/reading: white saviorism"
+    },
+    {
+      "key": "l1_globalSouthSpeaker",
+      "label": "Global South speaker"
+    },
+    {
+      "key": "l1_globalSouthAuthor",
+      "label": "Global South author"
+    }
+  ],
+  "layer2Categories": [
+    {
+      "key": "refusesSaviour",
+      "title": "Refuses the \"white saviour industrial complex\" framing",
+      "questions": [
+        {
+          "key": "l2_notCharity",
+          "label": "Not framed as charity / saviour lens"
+        },
+        {
+          "key": "l2_collectiveGoal",
+          "label": "Framed as collective global effort"
+        },
+        {
+          "key": "l2_dismantleDiscrimination",
+          "label": "Dismantling structural discrimination as necessary"
+        },
+        {
+          "key": "l2_partnerships",
+          "label": "Genuine partnerships, mutual trust & respect"
+        },
+        {
+          "key": "l2_equityJustice",
+          "label": "Rooted in equity and justice"
+        }
+      ]
+    },
+    {
+      "key": "broadFraming",
+      "title": "Broad structural / social / commercial / historical / political framing",
+      "questions": [
+        {
+          "key": "l2_contextualBiomedical",
+          "label": "Bio-medical issues with contextual factors"
+        },
+        {
+          "key": "l2_socioContexts",
+          "label": "Influence of socio-economic/political/historical/commercial contexts"
+        }
+      ]
+    },
+    {
+      "key": "allSettings",
+      "title": "Examines strengths & weaknesses in all settings, with context",
+      "questions": [
+        {
+          "key": "l2_contextInequity",
+          "label": "Contextual factors of inequity in LMIC and HIC"
+        },
+        {
+          "key": "l2_hicLmicSystems",
+          "label": "Strengths & weaknesses of HIC and LMIC systems"
+        },
+        {
+          "key": "l2_lmicBestPractices",
+          "label": "LMIC best practices; HIC not the benchmark"
+        },
+        {
+          "key": "l2_globalIsLocal",
+          "label": "Global health is also local for equity"
+        }
+      ]
+    },
+    {
+      "key": "powerPrivilege",
+      "title": "Focused attention to power and privilege",
+      "questions": [
+        {
+          "key": "l2_powerStatusQuo",
+          "label": "Role of power in the status quo"
+        },
+        {
+          "key": "l2_eliteCapture",
+          "label": "Elite capture / structural discrimination / decolonizing"
+        },
+        {
+          "key": "l2_positionality",
+          "label": "Students reflect on positionality & privilege"
+        }
+      ]
+    },
+    {
+      "key": "extractiveResearch",
+      "title": "Critiques extractive research; offers sustainable practice",
+      "questions": [
+        {
+          "key": "l2_sustainableResearch",
+          "label": "Platforms sustainable research practices"
+        },
+        {
+          "key": "l2_critiquesExtractive",
+          "label": "Critiques extractive research practices"
+        }
+      ]
+    },
+    {
+      "key": "epistemicJustice",
+      "title": "Prioritizes epistemic justice; minimizes the \"foreign gaze\"",
+      "questions": [
+        {
+          "key": "l2_platformsLmicVoices",
+          "label": "Platforms LMIC / Indigenous / affected-community voices"
+        },
+        {
+          "key": "l2_notNorthCentric",
+          "label": "Not only Euro/Global-North-centric voices"
+        }
+      ]
+    }
+  ]
+}
